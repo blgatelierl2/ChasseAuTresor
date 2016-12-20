@@ -1,0 +1,51 @@
+Atelier
+L2 informatique
+1er octobre 2013
+
+%!target : man
+%!encoding: utf-8
+%!postproc(man): "^(\.TH.*) 1 (.*)$"  \1 L2 \2 "TP3 — Boucles, tests & arithmétique"
+
+= TP3 — BOUCLES, TESTS & ARITHMÉTIQUE =
+
+Pour chacune des tâches suivantes, il s'agit de trouver une séquence de commandes shell la réalisant. Si nécessaire, on n'hésitera pas à :
+- utiliser des fichiers temporaires pour stocker des données intermédiaires ;
+- utiliser des variables pour stocker le résultat d'une commande, syntaxe **var=$(commande)** ;
+- faire des opérations arithmétiques, syntaxe **$(($i+1))** ;
+- utiliser des boucles **for** (avec **seq**) ou **while** ;
+- écrire les commandes dans un script...
+
+
+**Remarque** Des commandes utiles sont données en indication, on prendra le temps d'en lire le manuel.
+
+
+== Échauffement ==
+
++ Tirer au hasard un mot dans le dictionnaire du système **/usr/share/dict/words** (à l'aide de **wc** et de la variable **$RANDOM** qui contient à chaque utilisation un entier aléatoire).
+
++ Former un juron du capitaine Haddock en tirant au hasard un adjectif et un qualificatif dans les fichiers **data/haddock/noms** et **data/haddock/qualificatifs**.
+
++ Numéroter les lignes du fichier **data/txt/cyrano.txt** (à l'aide de **seq** et **paste**, on notera au passage que **cat -n** permet d'en faire autant plus simplement).
+
++ Afficher les termes de la suite de Syracuse, définie par **u(n+1)=u(n)/2** si **u(n)** est pair et **3*u(n)+1** sinon, partant de **u(0)=42**. On s'arrêtera lorsque la valeur 1 est atteinte.
+
++ Convertir en décimal un nombre binaire contenu dans la variable **$binaire** (initialiser par exemple **binaire=110110**).
+
+
+== Chasse au trésor ==
+
+Inutile d'essayer de sauter des étapes...
+
++ Afficher le contenu du fichier **tp3/sheep/sheep** sur 28 colonnes (par exemple à l'aide de **pr**).
+
++ Suivre la chaîne de liens initiée dans le fichier pointé par la réponse précédente.
+
++ Nettoyer le fichier de fin de chaîne des caractères non alphanumériques pour découvrir une nouvelle indication.
+
++ Suivre la nouvelle chaîne. Attention aux pièges !
+
++ Déterminer le fichier pointé par le fichier de fin de la chaîne précédente (à l'aide de **shasum**).
+
++ Analyser ce fichier (à l'aide de **file**). Le "déstructurer" autant de fois que nécessaire (à l'aide de **zcat** et **bzcat**) pour en tirer quelque chose de lisible.
+
++ The rest is silence (Hamlet V.2)
